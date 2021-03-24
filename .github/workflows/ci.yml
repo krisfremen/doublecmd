@@ -14,7 +14,7 @@ jobs:
 
       - name: install deps
         run: |
-          sudo apt-get install lazarus
+          sudo apt-get install lazarus libdbus-1-3
 
       - name: compile
         run: |
