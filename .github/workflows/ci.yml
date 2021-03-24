@@ -6,7 +6,7 @@ on:
 jobs:
   test:
     name: compile linux
-    runs-on: linux
+    runs-on: ubuntu-latest
 
     steps:
       # Check out latest code
