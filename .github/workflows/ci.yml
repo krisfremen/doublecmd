@@ -1,0 +1,13 @@
+name: ci
+
+on:
+  pull_request: # Run on all pull requests
+
+jobs:
+  test:
+    name: compile linux
+    runs-on: linux
+
+    steps:
+      # Check out latest code
+      - uses: actions/checkout@v2
