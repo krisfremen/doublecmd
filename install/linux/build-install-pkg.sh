@@ -3,9 +3,9 @@
 # This script build and install Double Commander Arch Linux package
 
 # Temp directory
-DC_TEMP_DIR=/var/tmp/doublecmd-$(date +%y.%m.%d)
+DC_TEMP_DIR=/home/runner/work/doublecmd/tmp/doublecmd-$(date +%y.%m.%d)
 # Directory for DC source code
-DC_SOURCE_DIR=$DC_TEMP_DIR/src
+DC_SOURCE_DIR=/home/runner/work/doublecmd/src
 # Widgetset library (gtk2 or qt)
 LCL_PLATFORM=$1
 
@@ -19,7 +19,7 @@ rm -rf $DC_TEMP_DIR
 mkdir -p $DC_TEMP_DIR
 
 # Export from SVN
-svn export ../../ $DC_SOURCE_DIR
+#svn export ../../ $DC_SOURCE_DIR
 
 # Save revision number
 DC_REVISION=`$(pwd)/update-revision.sh ../../ $DC_SOURCE_DIR`

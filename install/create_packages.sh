@@ -5,12 +5,13 @@ DC_VER=1.0.0
 
 # The new package will be saved here
 PACK_DIR=$(pwd)/linux/release
-
+mkdir tmp
 # Temp dir for creating *.tar.bz2 package
-BUILD_PACK_DIR=/var/tmp/doublecmd-$(date +%y.%m.%d)
-
+BUILD_PACK_DIR=$(pwd)/tmp/doublecmd-$(date +%y.%m.%d)
+mkdir $BUILD_PACK_DIR
 # Create temp dir for building
-BUILD_DC_TMP_DIR=/var/tmp/doublecmd-$DC_VER
+BUILD_DC_TMP_DIR=$(pwd)/tmp/doublecmd-$DC_VER
+mkdir $BUILD_DC_TMP_DIR
 
 help()
 {
@@ -56,8 +57,8 @@ if [ -z "$CK_DEBIAN" ] && [ -z "$CK_REDHAT" ] && [ -z "$CK_SLACKWARE" ] && [ -z 
 fi
 
 # Export from SVN
-rm -rf $BUILD_DC_TMP_DIR
-svn export ../ $BUILD_DC_TMP_DIR
+# rm -rf $BUILD_DC_TMP_DIR
+# svn export ../ $BUILD_DC_TMP_DIR
 
 # Update revision number
 linux/update-revision.sh ../ $BUILD_DC_TMP_DIR

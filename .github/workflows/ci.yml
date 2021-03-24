@@ -1,0 +1,22 @@
+name: ci
+
+on:
+  pull_request: # Run on all pull requests
+
+jobs:
+  test:
+    name: linux
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out latest code
+      - uses: actions/checkout@v2
+
+      - name: install deps
+        run: |
+          sudo apt-get install lazarus debhelper fp-utils fpc lcl lcl-gtk2 lcl-qt5 lcl-units lcl-utils libbz2-dev libdbus-1-dev libglib2.0-dev libgtk2.0-dev libqt5pas-dev
+
+      - name: compile
+        run: |
+          ./install/create_packages.sh
+#          lcl=gtk2 ./build.sh beta
