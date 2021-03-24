@@ -5,7 +5,7 @@ on:
 
 jobs:
   test:
-    name: compile linux
+    name: linux
     runs-on: ubuntu-latest
 
     steps:
