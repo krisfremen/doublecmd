@@ -7,10 +7,10 @@ DC_VER=1.0.0
 PACK_DIR=$(pwd)/linux/release
 
 # Temp dir for creating *.tar.bz2 package
-BUILD_PACK_DIR=$(pwd)/tmp/doublecmd-$(date +%y.%m.%d)
+BUILD_PACK_DIR=tmp/doublecmd-$(date +%y.%m.%d)
 mkdir -p "$BUILD_PACK_DIR"
 # Create temp dir for building
-BUILD_DC_TMP_DIR=$(pwd)/tmp/doublecmd-$DC_VER
+BUILD_DC_TMP_DIR=tmp/doublecmd-$DC_VER
 mkdir -p "$BUILD_DC_TMP_DIR"
 
 help()
