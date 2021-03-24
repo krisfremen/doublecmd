@@ -14,7 +14,7 @@ jobs:
 
       - name: install deps
         run: |
-          sudo apt-get install lazarus libdbus-1-3
+          sudo apt-get install lazarus debhelper fp-utils fpc lcl lcl-gtk2 lcl-qt5 lcl-units lcl-utils libbz2-dev libdbus-1-dev libglib2.0-dev libgtk2.0-dev libqt5pas-dev
 
       - name: compile
         run: |
