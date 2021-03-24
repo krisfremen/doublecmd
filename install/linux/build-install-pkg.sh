@@ -19,7 +19,7 @@ rm -rf $DC_TEMP_DIR
 mkdir -p $DC_TEMP_DIR
 
 # Export from SVN
-svn export ../../ $DC_SOURCE_DIR
+#svn export ../../ $DC_SOURCE_DIR
 
 # Save revision number
 DC_REVISION=`$(pwd)/update-revision.sh ../../ $DC_SOURCE_DIR`
