@@ -11,3 +11,7 @@ jobs:
     steps:
       # Check out latest code
       - uses: actions/checkout@v2
+      - run: |
+        sudo apt-get install lazarus
+      - run: |
+        lcl=gtk2 ./build.sh beta
