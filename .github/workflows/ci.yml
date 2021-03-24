@@ -14,8 +14,8 @@ jobs:
 
       - name: install deps
         run: |
-        sudo apt-get install lazarus
+          sudo apt-get install lazarus
 
       - name: compile
         run: |
-        lcl=gtk2 ./build.sh beta
+          lcl=gtk2 ./build.sh beta
