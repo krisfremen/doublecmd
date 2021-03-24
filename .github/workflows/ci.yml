@@ -11,7 +11,11 @@ jobs:
     steps:
       # Check out latest code
       - uses: actions/checkout@v2
-      - run: |
+
+      - name: install deps
+        run: |
         sudo apt-get install lazarus
-      - run: |
+
+      - name: compile
+        run: |
         lcl=gtk2 ./build.sh beta
