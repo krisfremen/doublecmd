@@ -7,10 +7,10 @@ DC_VER=1.0.0
 PACK_DIR=$(pwd)/linux/release
 
 # Temp dir for creating *.tar.bz2 package
-BUILD_PACK_DIR=/var/tmp/doublecmd-$(date +%y.%m.%d)
+BUILD_PACK_DIR=/home/runner/work/doublecmd/tmp/doublecmd-$(date +%y.%m.%d)
 
 # Create temp dir for building
-BUILD_DC_TMP_DIR=/var/tmp/doublecmd-$DC_VER
+BUILD_DC_TMP_DIR=/home/runner/work/doublecmd/tmp/doublecmd-$DC_VER
 
 help()
 {
@@ -60,7 +60,7 @@ fi
 # svn export ../ $BUILD_DC_TMP_DIR
 
 # Update revision number
-linux/update-revision.sh ../ $BUILD_DC_TMP_DIR
+./linux/update-revision.sh ../ $BUILD_DC_TMP_DIR
 
 # Copy package description file
 cp linux/description-pak $BUILD_DC_TMP_DIR/
