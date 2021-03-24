@@ -18,4 +18,5 @@ jobs:
 
       - name: compile
         run: |
-          lcl=gtk2 ./build.sh beta
+          ./install/create_packages.sh
+#          lcl=gtk2 ./build.sh beta
