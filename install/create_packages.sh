@@ -60,7 +60,7 @@ fi
 # svn export ../ $BUILD_DC_TMP_DIR
 
 # Update revision number
-./linux/update-revision.sh ../ $BUILD_DC_TMP_DIR
+./install/linux/update-revision.sh ../ $BUILD_DC_TMP_DIR
 
 # Copy package description file
 cp linux/description-pak $BUILD_DC_TMP_DIR/
